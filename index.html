@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        dialog {
+            position: fixed; /* Фиксированное позиционирование относительно вьюпорта */
+            left: 25%; /* Позиционирование от левого края вьюпорта */
+            top: 25%; /* Позиционирование от верхнего края вьюпорта */
+            transform: translate(-50%, -50%); /* Смещение диалога на 50% его ширины и высоты для центрирования */
+        }
+        input.error {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<div id="root"></div>
+<script src="index.js" type="module"></script>
+</body>
+</html>
