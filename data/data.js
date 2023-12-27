@@ -30,6 +30,16 @@ function clearError(error) {
     data.todolist.addNewTaskDialog.error = null;
 }
 
+export function changeTaskEditMode (thisTask) {
+    data.todolist.tasks = data.todolist.tasks.map(task => {
+        if (task === thisTask) {
+            task.editeMode = !task.editeMode;
+        }
+        return task;
+    })
+    notifySubscriber();
+}
+
 export function openAddTaskDialog() {
     data.todolist.addNewTaskDialog.isOpen = true;
     notifySubscriber();
@@ -66,6 +76,17 @@ export function createTask(newTitle) {
         notifySubscriber();
         return false;
     }
+}
+
+export function updateTask(thisTask, newTitle) {
+    data.todolist.tasks = data.todolist.tasks.map(task => {
+        if (task === thisTask) {
+            task.title = newTitle;
+            task.editeMode = false;
+        }
+        return task;
+    })
+    notifySubscriber();
 }
 
 export function deleteTask(id) {
