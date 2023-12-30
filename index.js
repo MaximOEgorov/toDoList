@@ -9,6 +9,12 @@ function refreshUI() {
     const rootElement = document.getElementById('root');
     rootElement.innerHTML = '';
     rootElement.append(todolistElement);
+
+/*    const inputElement = document.querySelector('input')
+     if (inputElement){
+         inputElement.focus()
+     }*/
+
 }
 
 refreshUI();
